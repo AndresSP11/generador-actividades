@@ -12,15 +12,12 @@
     })
 
     const validar=()=>{
-        if(Object.values(tarea).includes("")){
-            
-        }
-        console.log("Validando")
+        console.log(tarea.nombre)
     }
 </script>
 <template>
     <div class="contenedor-formulario">
-        <form class="formulario shadow-md shadow-green-200 rounded-md w-96">
+        <form class="formulario shadow-md shadow-green-200 rounded-md w-96" @submit.prevent="validar ">
             <div>
                 <label class="labeldiv font-bold text-green-900 uppercase ">
                     Actividad a realizar
@@ -49,7 +46,7 @@
                 v-model="tarea.asunto"
                 ></textarea>
             </div>
-            <input @submit="validar " type="submit" class=" block rounded-md bg-orange-200 w-full hover:bg-red-400 cursor-pointer h-10 uppercase font-bold">
+            <input  type="submit" class=" block rounded-md bg-orange-200 w-full hover:bg-red-400 cursor-pointer h-10 uppercase font-bold">
         </form>
     </div>
         
