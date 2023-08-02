@@ -3,8 +3,7 @@
 </script>
 
 <template>
-    <div class="padre">
-        <div class="contenedor-hijo">
+    <div class="contenedor-hijo">
             <h1 class=" text-4xl text-center">Actividad</h1>
             <div class="">
                 <h3 class=" px-3 block">Nombre Actividad:</h3>
@@ -26,24 +25,11 @@
                 <button class="rigth w-full bg-indigo-400 rounded-md uppercase font-bold py-1">Editar</button>
                 <button class="left w-full rigth w-full bg-green-400 rounded-md uppercase font-bold my-3 py-1">Actividad Realizada</button>
             </div>
-        </div>
-        
     </div>
 </template>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-    .padre{
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(300px,390px));
-        gap: 10px;
-        margin-top:40px;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        align-items: center;
-        justify-content: center;
-        align-items: center;
-    }
+    
 
     .contenedor-hijo{
         border: 2px solid black;
