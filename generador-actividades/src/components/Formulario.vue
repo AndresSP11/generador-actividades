@@ -1,5 +1,6 @@
 <script setup>
     import { reactive } from 'vue'
+    import Alerta from './Alerta.vue'
     const alerta= reactive({
         mensaje:'',
         tipo:''
@@ -12,12 +13,21 @@
     })
 
     const validar=()=>{
-        console.log(tarea.nombre)
+        if(Object.values(tarea).includes('')){
+            console.log("Llenar los espacios vacios")
+            alerta.mensaje="Llenar los espacio vacios"
+            alerta.tipo="Error"
+            return
+        }
     }
 </script>
 <template>
     <div class="contenedor-formulario">
+        
+        <!-- En el formulario es en donde se manda la parte del evento submit, n o en el boton -->
         <form class="formulario shadow-md shadow-green-200 rounded-md w-96" @submit.prevent="validar ">
+            <Alerta v-if="alerta.mensaje"
+        :alerta="alerta"></Alerta>
             <div>
                 <label class="labeldiv font-bold text-green-900 uppercase ">
                     Actividad a realizar
